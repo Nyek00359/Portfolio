@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio - Website Development</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/website.css">
+</head>
+<body>
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- WEBSITE DEVELOPING SECTION - Carousel Theme -->
+        <section class="tab-content active" id="website">
+            <div class="website-section">
+                <h2 class="section-title">Website Development Portfolio</h2>
+
+                <!-- How Do I Work Section -->
+                <div class="how-i-work-section">
+                    <h3 class="work-title">How Do I Work</h3>
+                    <div class="work-process">
+                        <div class="process-step">
+                            <div class="step-icon">
+                                <i class="fas fa-pencil-ruler"></i>
+                            </div>
+                            <h4 class="step-title">Wireframe</h4>
+                            <p class="step-description">I create detailed wireframes and mockups to visualize the website structure, layout, and user flow before writing any code.</p>
+                        </div>
+                        <div class="process-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-icon">
+                                <i class="fas fa-clipboard-list"></i>
+                            </div>
+                            <h4 class="step-title">Planning</h4>
+                            <p class="step-description">I analyze requirements, define technical specifications, and create a project roadmap with milestones and timelines.</p>
+                        </div>
+                        <div class="process-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h4 class="step-title">Development</h4>
+                            <p class="step-description">I build the website using modern technologies, implementing responsive design, animations, and interactive features.</p>
+                        </div>
+                        <div class="process-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-icon">
+                                <i class="fas fa-bug"></i>
+                            </div>
+                            <h4 class="step-title">Testing</h4>
+                            <p class="step-description">I thoroughly test the website across devices and browsers, ensuring optimal performance and bug-free experience.</p>
+                        </div>
+                        <div class="process-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <h4 class="step-title">Launch</h4>
+                            <p class="step-description">I deploy the website to production, configure hosting, and provide ongoing maintenance and support.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Website Preview Section -->
+                <div class="website-preview-section">
+                    <h3 class="preview-title">Featured Project: A+ Pack Website</h3>
+                    <!-- Hero Image Display -->
+                    <div class="hero-container">
+                        <img id="hero-image" src="../assets/img/web/home.png" alt="A+ Pack Website" class="hero-image">
+                        <div class="hero-label" id="hero-label">Home</div>
+                    </div>
+                    
+                    <!-- Thumbnail Navigation -->
+                    <div class="thumbnail-nav">
+                        <button class="thumb-btn active" onclick="changeHeroImage('../assets/img/web/home.png', 'Home', this)">
+                            <img src="../assets/img/web/home.png" alt="Home" class="thumb-image">
+                            <span class="thumb-label">Home</span>
+                        </button>
+                        <button class="thumb-btn" onclick="changeHeroImage('../assets/img/web/products.png', 'Products', this)">
+                            <img src="../assets/img/web/products.png" alt="Products" class="thumb-image">
+                            <span class="thumb-label">Products</span>
+                        </button>
+                        <button class="thumb-btn" onclick="changeHeroImage('../assets/img/web/Journey.png', 'Journey', this)">
+                            <img src="../assets/img/web/Journey.png" alt="Journey" class="thumb-image">
+                            <span class="thumb-label">Journey</span>
+                        </button>
+                        <button class="thumb-btn" onclick="changeHeroImage('../assets/img/web/We buy.png', 'We buy', this)">
+                            <img src="../assets/img/web/We buy.png" alt="We buy" class="thumb-image">
+                            <span class="thumb-label">We buy</span>
+                        </button>
+                    </div>
+                    
+                    <div class="preview-links">
+                        <a href="https://www.aplus-pack.com/new/ver2.0.php" target="_blank" rel="noopener noreferrer" class="preview-link">
+                            <i class="fas fa-external-link-alt"></i> Visit Live Website
+                        </a>
+                        <button class="preview-link more-btn" onclick="openContributionModal()">
+                            <i class="fas fa-info-circle"></i> More Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Novus Website Preview Section -->
+                <div class="website-preview-section">
+                    <h3 class="preview-title">Featured Project: Novus Website</h3>
+                    <!-- Hero Image Display -->
+                    <div class="hero-container">
+                        <img id="novus-hero-image" src="../assets/img/web/novus_home.png" alt="Novus Website" class="hero-image">
+                        <div class="hero-label" id="novus-hero-label">Home</div>
+                    </div>
+                    
+                    <!-- Thumbnail Navigation -->
+                    <div class="thumbnail-nav">
+                        <button class="thumb-btn active" onclick="changeNovusHeroImage('../assets/img/web/novus_home.png', 'Home', this)">
+                            <img src="../assets/img/web/novus_home.png" alt="Home" class="thumb-image">
+                            <span class="thumb-label">Home</span>
+                        </button>
+                        <button class="thumb-btn" onclick="changeNovusHeroImage('../assets/img/web/novus_process.png', 'Process', this)">
+                            <img src="../assets/img/web/novus_process.png" alt="Process" class="thumb-image">
+                            <span class="thumb-label">Process</span>
+                        </button>
+                        <button class="thumb-btn" onclick="changeNovusHeroImage('../assets/img/web/novus_milestone.png', 'Milestone', this)">
+                            <img src="../assets/img/web/novus_milestone.png" alt="Milestone" class="thumb-image">
+                            <span class="thumb-label">Milestone</span>
+                        </button>
+                        <button class="thumb-btn" onclick="changeNovusHeroImage('../assets/img/web/novus_contact.png', 'Contact', this)">
+                            <img src="../assets/img/web/novus_contact.png" alt="Contact" class="thumb-image">
+                            <span class="thumb-label">Contact</span>
+                        </button>
+                    </div>
+                    
+                    <div class="preview-links">
+                        <a href="../novuscore/novus.php" target="_blank" rel="noopener noreferrer" class="preview-link">
+                            <i class="fas fa-external-link-alt"></i> Visit Live Website
+                        </a>
+                        <button class="preview-link more-btn" onclick="openNovusContributionModal()">
+                            <i class="fas fa-info-circle"></i> More Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Contribution Modal -->
+                <div id="contributionModal" class="modal" onclick="closeContributionModal(event)">
+                    <div class="modal-content">
+                        <button class="modal-close" onclick="closeContributionModal(event)">&times;</button>
+                        <h2 class="modal-title">My Contributions</h2>
+                        <ul class="contribution-list">
+                            <li>Built the entire responsive website from scratch using modern web technologies</li>
+                            <li>Implemented responsive navigation with hamburger menu for mobile devices</li>
+                            <li>Created an animated hero section with 3D packaging showcase and orbiting elements</li>
+                            <li>Developed an AI-powered chatbot widget with quick questions and manual response matching</li>
+                            <li>Designed and implemented a one-time help notification overlay with drag functionality</li>
+                            <li>Created the About section with company info, mission & vision, and certifications</li>
+                            <li>Built the Services section with 6 service cards (Thermoforming, Customized Mold, Precision Tooling, Product Design, Logistics, Custom Tray Packaging)</li>
+                            <li>Implemented SEO optimization including meta tags, Open Graph, Twitter Cards, and JSON-LD structured data</li>
+                            <li>Designed responsive footer with multi-column navigation and social media links</li>
+                            <li>Integrated contact form and quotation request functionality</li>
+                            <li>Added smooth scrolling and modern UI animations throughout the site</li>
+                            <li>Implemented full mobile-responsive design with touch-friendly interactions</li>
+                        </ul>
+                        <h3 class="techstack-title">Tech Stack Used</h3>
+                        <div class="techstack-tags">
+                            <span class="tech-tag"><i class="fab fa-html5"></i> HTML5</span>
+                            <span class="tech-tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+                            <span class="tech-tag"><i class="fab fa-js"></i> JavaScript</span>
+                            <span class="tech-tag"><i class="fas fa-code"></i> Vanilla JS</span>
+                            <span class="tech-tag"><i class="fab fa-google"></i> Google Fonts</span>
+                            <span class="tech-tag"><i class="fas fa-search"></i> SEO</span>
+                            <span class="tech-tag"><i class="fas fa-mobile-alt"></i> Responsive Design</span>
+                            <span class="tech-tag"><i class="fas fa-robot"></i> AI Chatbot</span>
+                            <span class="tech-tag"><i class="fas fa-chart-pie"></i> JSON-LD</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Novus Contribution Modal -->
+                <div id="novusContributionModal" class="modal" onclick="closeNovusContributionModal(event)">
+                    <div class="modal-content">
+                        <button class="modal-close" onclick="closeNovusContributionModal(event)">&times;</button>
+                        <h2 class="modal-title">My Contributions</h2>
+                        <ul class="contribution-list">
+                            <li>Developed a complete multi-page corporate website from scratch</li>
+                            <li>Created a custom PHP-based content management system</li>
+                            <li>Implemented responsive design with modern CSS techniques</li>
+                            <li>Built an interactive process section showcasing company workflow</li>
+                            <li>Designed a milestone timeline with visual achievements display</li>
+                            <li>Created a contact form with validation and submission handling</li>
+                            <li>Implemented smooth scrolling navigation</li>
+                            <li>Added modern animations and transitions</li>
+                            <li>Optimized for performance and fast loading</li>
+                        </ul>
+                        <h3 class="techstack-title">Tech Stack Used</h3>
+                        <div class="techstack-tags">
+                            <span class="tech-tag"><i class="fab fa-html5"></i> HTML5</span>
+                            <span class="tech-tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+                            <span class="tech-tag"><i class="fab fa-js"></i> JavaScript</span>
+                            <span class="tech-tag"><i class="fab fa-php"></i> PHP</span>
+                            <span class="tech-tag"><i class="fas fa-database"></i> MySQL</span>
+                            <span class="tech-tag"><i class="fas fa-mobile-alt"></i> Responsive Design</span>
+                            <span class="tech-tag"><i class="fas fa-server"></i> Backend Development</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Description -->
+                <div class="website-description">
+                    <h3>Custom Website Development</h3>
+                    <p>
+                        I create stunning, responsive websites that engage users and drive results. 
+                        From e-commerce platforms to corporate websites, I deliver tailored solutions 
+                        that meet your unique business needs.
+                    </p>
+                    <p>
+                        Every project starts with understanding your vision and goals. I combine 
+                        creativity with technical expertise to build websites that not only look 
+                        beautiful but also perform exceptionally well.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag"><i class="fab fa-html5"></i> HTML5</span>
+                        <span class="tech-tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+                        <span class="tech-tag"><i class="fab fa-js"></i> JavaScript</span>
+                        <span class="tech-tag"><i class="fab fa-react"></i> React</span>
+                        <span class="tech-tag"><i class="fab fa-vuejs"></i> Vue.js</span>
+                        <span class="tech-tag"><i class="fab fa-node"></i> Node.js</span>
+                        <span class="tech-tag"><i class="fab fa-python"></i> Python</span>
+                        <span class="tech-tag"><i class="fab fa-php"></i> PHP</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/components.js"></script>
+    <script src="../js/script.js"></script>
+    <script>
+        function changeHeroImage(imageSrc, label, btn) {
+            const heroImage = document.getElementById('hero-image');
+            const heroLabel = document.getElementById('hero-label');
+            const thumbnails = document.querySelectorAll('.thumb-btn');
+            
+            // Fade out
+            heroImage.style.opacity = '0';
+            
+            setTimeout(function() {
+                // Change image and label
+                heroImage.src = imageSrc;
+                heroLabel.textContent = label;
+                
+                // Update active thumbnail
+                thumbnails.forEach(thumb => thumb.classList.remove('active'));
+                btn.classList.add('active');
+                
+                // Fade in
+                heroImage.style.opacity = '1';
+            }, 200);
+        }
+        
+        function openContributionModal() {
+            document.getElementById('contributionModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeContributionModal(event) {
+            if (event.target.classList.contains('modal') || event.target.classList.contains('modal-close') || event.target.tagName === 'BUTTON') {
+                document.getElementById('contributionModal').classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+        
+        // Novus Website Image Carousel Functions
+        function changeNovusHeroImage(imageSrc, label, btn) {
+            const heroImage = document.getElementById('novus-hero-image');
+            const heroLabel = document.getElementById('novus-hero-label');
+            const thumbnails = btn.parentElement.querySelectorAll('.thumb-btn');
+            
+            // Fade out
+            heroImage.style.opacity = '0';
+            
+            setTimeout(function() {
+                // Change image and label
+                heroImage.src = imageSrc;
+                heroLabel.textContent = label;
+                
+                // Update active thumbnail
+                thumbnails.forEach(thumb => thumb.classList.remove('active'));
+                btn.classList.add('active');
+                
+                // Fade in
+                heroImage.style.opacity = '1';
+            }, 200);
+        }
+        
+        function openNovusContributionModal() {
+            document.getElementById('novusContributionModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeNovusContributionModal(event) {
+            if (event.target.classList.contains('modal') || event.target.classList.contains('modal-close') || event.target.tagName === 'BUTTON') {
+                document.getElementById('novusContributionModal').classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+        
+        // Close modal on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                document.getElementById('contributionModal').classList.remove('active');
+                document.getElementById('novusContributionModal').classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    </script>
+</body>
+</html>
