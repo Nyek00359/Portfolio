@@ -140,10 +140,35 @@
                     </div>
                     
                     <div class="preview-links">
-                        <a href="../novuscore/novus.php" target="_blank" rel="noopener noreferrer" class="preview-link">
-                            <i class="fas fa-external-link-alt"></i> Visit Live Website
-                        </a>
                         <button class="preview-link more-btn" onclick="openNovusContributionModal()">
+                            <i class="fas fa-info-circle"></i> More Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Zealous Website Preview Section -->
+                <div class="website-preview-section">
+                    <h3 class="preview-title">Featured Project: Zealous Website</h3>
+                    <!-- Hero Image Display -->
+                    <div class="hero-container">
+                        <img id="zealous-hero-image" src="../assets/img/web/zealous_home.png" alt="Zealous Website" class="hero-image">
+                        <div class="hero-label" id="zealous-hero-label">Home</div>
+                    </div>
+                    
+                    <!-- Thumbnail Navigation -->
+                    <div class="thumbnail-nav">
+                        <button class="thumb-btn active" onclick="changeZealousHeroImage('../assets/img/web/zealous_home.png', 'Home', this)">
+                            <img src="../assets/img/web/zealous_home.png" alt="Home" class="thumb-image">
+                            <span class="thumb-label">Home</span>
+                        </button>
+                        <button class="thumb-btn" onclick="changeZealousHeroImage('../assets/img/web/zealous_contact.png', 'Contact', this)">
+                            <img src="../assets/img/web/zealous_contact.png" alt="Contact" class="thumb-image">
+                            <span class="thumb-label">Contact</span>
+                        </button>
+                    </div>
+                    
+                    <div class="preview-links">
+                        <button class="preview-link more-btn" onclick="openZealousContributionModal()">
                             <i class="fas fa-info-circle"></i> More Details
                         </button>
                     </div>
@@ -208,6 +233,33 @@
                             <span class="tech-tag"><i class="fas fa-database"></i> MySQL</span>
                             <span class="tech-tag"><i class="fas fa-mobile-alt"></i> Responsive Design</span>
                             <span class="tech-tag"><i class="fas fa-server"></i> Backend Development</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Zealous Contribution Modal -->
+                <div id="zealousContributionModal" class="modal" onclick="closeZealousContributionModal(event)">
+                    <div class="modal-content">
+                        <button class="modal-close" onclick="closeZealousContributionModal(event)">&times;</button>
+                        <h2 class="modal-title">My Contributions</h2>
+                        <ul class="contribution-list">
+                            <li>Designed and developed a modern, responsive website for Zealous</li>
+                            <li>Created a visually appealing homepage with animated elements</li>
+                            <li>Built a services section showcasing company offerings</li>
+                            <li>Implemented an about page with team information</li>
+                            <li>Created a fully functional contact form with validation</li>
+                            <li>Added smooth scroll animations and transitions</li>
+                            <li>Optimized for mobile devices and fast loading</li>
+                            <li>Integrated social media links and footer</li>
+                        </ul>
+                        <h3 class="techstack-title">Tech Stack Used</h3>
+                        <div class="techstack-tags">
+                            <span class="tech-tag"><i class="fab fa-html5"></i> HTML5</span>
+                            <span class="tech-tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+                            <span class="tech-tag"><i class="fab fa-js"></i> JavaScript</span>
+                            <span class="tech-tag"><i class="fab fa-google"></i> Google Fonts</span>
+                            <span class="tech-tag"><i class="fas fa-mobile-alt"></i> Responsive Design</span>
+                            <span class="tech-tag"><i class="fas fa-paint-brush"></i> UI/UX Design</span>
                         </div>
                     </div>
                 </div>
@@ -312,11 +364,47 @@
             }
         }
         
+        // Zealous Website Image Carousel Functions
+        function changeZealousHeroImage(imageSrc, label, btn) {
+            const heroImage = document.getElementById('zealous-hero-image');
+            const heroLabel = document.getElementById('zealous-hero-label');
+            const thumbnails = btn.parentElement.querySelectorAll('.thumb-btn');
+            
+            // Fade out
+            heroImage.style.opacity = '0';
+            
+            setTimeout(function() {
+                // Change image and label
+                heroImage.src = imageSrc;
+                heroLabel.textContent = label;
+                
+                // Update active thumbnail
+                thumbnails.forEach(thumb => thumb.classList.remove('active'));
+                btn.classList.add('active');
+                
+                // Fade in
+                heroImage.style.opacity = '1';
+            }, 200);
+        }
+        
+        function openZealousContributionModal() {
+            document.getElementById('zealousContributionModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeZealousContributionModal(event) {
+            if (event.target.classList.contains('modal') || event.target.classList.contains('modal-close') || event.target.tagName === 'BUTTON') {
+                document.getElementById('zealousContributionModal').classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+        
         // Close modal on Escape key
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
                 document.getElementById('contributionModal').classList.remove('active');
                 document.getElementById('novusContributionModal').classList.remove('active');
+                document.getElementById('zealousContributionModal').classList.remove('active');
                 document.body.style.overflow = '';
             }
         });
