@@ -75,6 +75,15 @@
     color: var(--primary);
 }
 
+.profile-picture {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary);
+    box-shadow: 0 0 20px var(--glow-primary);
+}
+
 /* Services Section */
 .services-section {
     padding: 2rem 1.5rem;
