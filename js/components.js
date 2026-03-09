@@ -36,14 +36,8 @@ const navigationHTML = `
             <a href="../pages/index.html" class="nav-tab ${currentPage === 'index.html' ? 'active' : ''}">
                 <i class="fas fa-home"></i> Home
             </a>
-            <a href="../pages/video.html" class="nav-tab ${currentPage === 'video.html' ? 'active' : ''}">
-                <i class="fas fa-video"></i> Video
-            </a>
-            <a href="../pages/photo.html" class="nav-tab ${currentPage === 'photo.html' ? 'active' : ''}">
-                <i class="fas fa-camera"></i> Photo
-            </a>
             <a href="../pages/graphic.html" class="nav-tab ${currentPage === 'graphic.html' ? 'active' : ''}">
-                <i class="fas fa-palette"></i> Graphic
+                <i class="fas fa-paint-brush"></i> Graphic
             </a>
             <a href="../pages/website.html" class="nav-tab ${currentPage === 'website.html' ? 'active' : ''}">
                 <i class="fas fa-globe"></i> Web
