@@ -94,3 +94,36 @@ function goToSlide(index) {
 setInterval(() => {
     moveCarousel(1);
 }, 5000);
+
+// Trifolds Carousel Functionality
+function changeSlide(btn, direction) {
+    const container = btn.closest('.carousel-container');
+    const slides = container.querySelectorAll('.carousel-slide');
+    let currentIndex = 0;
+    
+    // Find current active slide
+    slides.forEach((slide, index) => {
+        if (slide.classList.contains('active')) {
+            currentIndex = index;
+        }
+    });
+    
+    // Remove active from current slide
+    slides[currentIndex].classList.remove('active');
+    
+    // Calculate new index
+    let newIndex = currentIndex + direction;
+    if (newIndex < 0) newIndex = slides.length - 1;
+    if (newIndex >= slides.length) newIndex = 0;
+    
+    // Add active to new slide
+    slides[newIndex].classList.add('active');
+}
+
+// Auto-advance Trifolds carousel
+document.querySelectorAll('.carousel-container').forEach(container => {
+    setInterval(() => {
+        const btn = container.querySelector('.next');
+        if (btn) changeSlide(btn, 1);
+    }, 4000);
+});

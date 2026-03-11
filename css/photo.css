@@ -64,6 +64,65 @@
     justify-content: center;
     align-items: center;
     font-size: 3rem;
+    overflow: hidden;
+}
+
+.bento-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* Carousel Styles */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    z-index: 10;
+    transition: background 0.3s;
+}
+
+.carousel-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
 }
 
 .bento-bg.photo-1 { background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); }
@@ -92,7 +151,7 @@
     .bento-grid {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 200px);
-        gap: 1.2rem;
+        gap: 0.5rem;
     }
     
     .bento-item:nth-child(1) {
@@ -107,6 +166,12 @@
     .section-title {
         font-size: 2rem;
         margin-bottom: 2rem;
+        text-align: center;
+    }
+    
+    .section-title::after {
+        left: 50%;
+        transform: translateX(-50%);
     }
     
     .bento-bg {
@@ -128,7 +193,7 @@
     .bento-grid {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(3, 220px);
-        gap: 1.5rem;
+        gap: 1rem;
         max-width: 1400px;
         margin: 0 auto;
     }
@@ -171,12 +236,15 @@
     .section-title {
         font-size: 2.5rem;
         margin-bottom: 2.5rem;
+        text-align: center;
     }
     
     .section-title::after {
         width: 80px;
         height: 4px;
         bottom: -12px;
+        left: 50%;
+        transform: translateX(-50%);
     }
     
     .bento-bg {

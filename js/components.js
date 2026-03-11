@@ -36,7 +36,7 @@ const navigationHTML = `
             <a href="../pages/index.html" class="nav-tab ${currentPage === 'index.html' ? 'active' : ''}">
                 <i class="fas fa-home"></i> Home
             </a>
-            <a href="../pages/graphic.html" class="nav-tab ${currentPage === 'graphic.html' ? 'active' : ''}">
+            <a href="../pages/photo.html" class="nav-tab ${currentPage === 'photo.html' ? 'active' : ''}">
                 <i class="fas fa-paint-brush"></i> Graphic
             </a>
             <a href="../pages/website.html" class="nav-tab ${currentPage === 'website.html' ? 'active' : ''}">
