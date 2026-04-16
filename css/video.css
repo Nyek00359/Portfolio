@@ -1,8 +1,16 @@
 /* VIDEO EDITING - Showcase Theme Styles */
 
+/* Base font size */
+html {
+    font-size: 14px;
+}
+
+/* Import 8-bit font */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 /* Base Mobile Styles */
 .video-section {
-    padding: 1.5rem;
+    padding: 2rem 1.5rem;
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -11,7 +19,7 @@
     font-size: 1.8rem;
     font-weight: 600;
     text-align: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     position: relative;
 }
 
@@ -111,7 +119,7 @@
 /* Desktop */
 @media (min-width: 1024px) {
     .video-section {
-        padding: 2rem;
+        padding: 2rem 1.5rem;
     }
     
     .showcase-grid {

@@ -33,16 +33,13 @@ const navigationHTML = `
             <span></span>
         </button>
         <div class="nav-tabs" id="navTabs">
-            <a href="../pages/index.html" class="nav-tab ${currentPage === 'index.html' ? 'active' : ''}">
+            <a href="../pages/index.html" class="nav-tab ${currentPage === 'index.html' ? 'active' : ''}" data-tab="home">
                 <i class="fas fa-home"></i> Home
             </a>
-            <a href="../pages/photo.html" class="nav-tab ${currentPage === 'photo.html' ? 'active' : ''}">
-                <i class="fas fa-paint-brush"></i> Graphic
-            </a>
-            <a href="../pages/website.html" class="nav-tab ${currentPage === 'website.html' ? 'active' : ''}">
+            <a href="../pages/website.html" class="nav-tab ${currentPage === 'website.html' ? 'active' : ''}" data-tab="web">
                 <i class="fas fa-globe"></i> Web
             </a>
-            <a href="../pages/app.html" class="nav-tab ${currentPage === 'app.html' ? 'active' : ''}">
+            <a href="../pages/app.html" class="nav-tab ${currentPage === 'app.html' ? 'active' : ''}" data-tab="app">
                 <i class="fas fa-mobile-alt"></i> App
             </a>
         </div>

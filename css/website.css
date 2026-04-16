@@ -1,8 +1,16 @@
 /* WEBSITE DEVELOPING - Carousel Theme Styles */
 
+/* Base font size */
+html {
+    font-size: 14px;
+}
+
+/* Import 8-bit font */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 /* Base Mobile Styles */
 .website-section {
-    padding: 1.5rem;
+    padding: 2rem 1.5rem;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -11,7 +19,7 @@
     font-size: 1.8rem;
     font-weight: 600;
     text-align: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     position: relative;
 }
 
@@ -109,15 +117,15 @@
 .carousel-arrow.next { right: 10px; }
 
 .website-description {
-    margin-top: 1.5rem;
+    margin-top: 0;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
-    padding: 1.5rem;
+    padding: 2rem 1.5rem;
 }
 
 .website-description h3 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     margin-bottom: 1rem;
     background: linear-gradient(135deg, var(--primary), var(--accent));
     -webkit-background-clip: text;
@@ -149,15 +157,15 @@
 
 /* Website Preview Section */
 .website-preview-section {
-    margin-top: 2rem;
+    margin-top: 0;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
-    padding: 1.5rem;
+    padding: 2rem 1.5rem;
 }
 
 .preview-title {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     margin-bottom: 0.5rem;
     background: linear-gradient(135deg, var(--primary), var(--accent));
     -webkit-background-clip: text;
@@ -259,8 +267,8 @@
 
 /* Contribution Details */
 .contribution-details {
-    margin-top: 2rem;
-    padding-top: 1.5rem;
+    margin-top: 0;
+    padding: 2rem 1.5rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -269,6 +277,28 @@
     font-size: 1.1rem;
     margin-bottom: 1rem;
     color: #fff;
+}
+
+.case-study-modal {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    border-left: 3px solid var(--accent);
+}
+
+.case-study-title {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+}
+
+.case-problem,
+.case-solution,
+.case-impact {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
 }
 
 .contribution-list {
@@ -282,7 +312,7 @@
     padding-left: 1.5rem;
     margin-bottom: 0.6rem;
     color: rgba(255, 255, 255, 0.75);
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     line-height: 1.5;
 }
 
@@ -470,7 +500,7 @@
     gap: 0.5rem;
     padding: 0.75rem 1.5rem;
     background: linear-gradient(135deg, var(--primary), var(--accent));
-    color: #fff;
+    color: #1a1a2e;
     text-decoration: none;
     border-radius: 25px;
     font-size: 0.9rem;
@@ -498,17 +528,17 @@
     box-shadow: 0 5px 20px rgba(56, 249, 215, 0.4);
 }
 
-/* How Do I Work Section */
+/* How Do I Work Section - Linear Timeline */
 .how-i-work-section {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
-    padding: 2rem;
-    margin-bottom: 2rem;
+    padding: 2rem 1.5rem;
+    margin-bottom: 0;
 }
 
 .work-title {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     text-align: center;
     margin-bottom: 2rem;
     background: linear-gradient(135deg, var(--primary), var(--accent));
@@ -516,90 +546,187 @@
     -webkit-text-fill-color: transparent;
 }
 
-.work-process {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+.timeline {
+    position: relative;
+    padding-left: 30px;
 }
 
-.process-step {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 1.5rem;
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, var(--primary), var(--accent));
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -30px;
+    top: 20px;
+    width: 16px;
+    height: 16px;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    border-radius: 50%;
+    border: 3px solid var(--bg);
+    box-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
+}
+
+.timeline-content {
+    padding: 1.25rem;
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 12px;
     transition: all 0.3s ease;
 }
 
-.process-step:hover {
+.timeline-content:hover {
     background: rgba(255, 255, 255, 0.08);
     border-color: var(--primary);
-    transform: translateY(-3px);
+    transform: translateX(5px);
+}
+
+.step-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
 }
 
 .step-icon {
-    width: 60px;
-    height: 60px;
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(135deg, var(--primary), var(--accent));
     border-radius: 50%;
-    margin-bottom: 1rem;
 }
 
 .step-icon i {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     color: #fff;
 }
 
 .step-title {
     font-size: 1.1rem;
     color: #fff;
-    margin-bottom: 0.5rem;
+    margin: 0;
 }
 
 .step-description {
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
     line-height: 1.5;
+    margin-bottom: 0.75rem;
 }
 
-.process-arrow {
+.step-details {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
-    justify-content: center;
-    color: var(--accent);
-    font-size: 1.2rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.step-details li {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.35rem 0.65rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Tablet and Desktop */
 @media (min-width: 768px) {
-    .work-process {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: flex-start;
-        gap: 1rem;
+    .timeline {
+        padding-left: 0;
     }
     
-    .process-step {
-        flex: 1 1 calc(33.333% - 1rem);
-        max-width: calc(33.333% - 1rem);
-        min-width: 200px;
+    .timeline::before {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 3px;
     }
     
-    .process-arrow {
-        flex: 0 0 auto;
-        align-self: center;
-        padding: 0 0.5rem;
+    .timeline-item {
+        padding-left: 0;
+        padding-bottom: 2rem;
+        width: 50%;
+        margin-left: auto;
     }
-}
-
-/* Tablet */
-@media (min-width: 768px) {
+    
+    .timeline-item:nth-child(odd) {
+        margin-left: 0;
+        margin-right: auto;
+        text-align: right;
+        padding-right: 2rem;
+        padding-left: 0;
+    }
+    
+    .timeline-item:nth-child(even) {
+        padding-left: 2rem;
+    }
+    
+    .timeline-marker {
+        left: calc(50% - 8px);
+    }
+    
+    .timeline-item:nth-child(odd) .timeline-marker {
+        left: auto;
+        right: calc(50% - 8px);
+    }
+    
+    .timeline-content {
+        padding: 1.5rem;
+    }
+    
+    .timeline-content:hover {
+        transform: translateY(-3px);
+    }
+    
+    .timeline-item:nth-child(odd) .timeline-content:hover {
+        transform: translateY(-3px);
+    }
+    
+    .step-header {
+        justify-content: flex-start;
+        margin-bottom: 1rem;
+    }
+    
+    .timeline-item:nth-child(odd) .step-header {
+        justify-content: flex-end;
+    }
+    
+    .step-icon {
+        width: 55px;
+        height: 55px;
+        min-width: 55px;
+    }
+    
+    .step-icon i {
+        font-size: 1.3rem;
+    }
+    
+    .step-details li {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.75rem;
+    }
+    
     .carousel-slide {
         height: 350px;
     }
@@ -615,58 +742,15 @@
     }
     
     .section-title {
-        font-size: 2rem;
+        font-size: 2.5rem;
         margin-bottom: 2rem;
-    }
-    
-    .website-description {
-        padding: 2rem;
-    }
-    
-    .website-description h3 {
-        font-size: 1.6rem;
-    }
-    
-    .website-preview-section {
-        padding: 2rem;
-    }
-    
-    .preview-title {
-        font-size: 1.6rem;
-    }
-    
-    .thumb-image {
-        width: 120px;
-        height: 70px;
-    }
-    
-    .thumb-label {
-        font-size: 0.8rem;
-    }
-    
-    .hero-label {
-        font-size: 1.1rem;
-    }
-    
-    .contribution-details {
-        margin-top: 2.5rem;
-        padding-top: 2rem;
-    }
-    
-    .contribution-title,
-    .techstack-title {
-        font-size: 1.2rem;
-    }
-    
-    .contribution-list li {
-        font-size: 0.9rem;
     }
 }
 
 /* Desktop */
 @media (min-width: 1024px) {
     .website-section {
-        padding: 2rem;
+        padding: 2rem 1.5rem;
     }
     
     .carousel-container {
@@ -701,49 +785,13 @@
         margin-bottom: 3rem;
     }
     
-    .website-description {
-        margin-top: 3rem;
-        padding: 2.5rem;
-    }
-    
     .tech-stack {
         gap: 1rem;
     }
     
     .tech-tag {
         padding: 0.5rem 1.2rem;
-        font-size: 0.9rem;
-    }
-    
-    .website-preview-section {
-        margin-top: 3rem;
-        padding: 2.5rem;
-    }
-    
-    .preview-title {
-        font-size: 1.8rem;
-    }
-    
-    .contribution-note {
-        font-size: 1rem;
-    }
-    
-    .website-iframe {
-        height: 600px;
-    }
-    
-    .preview-link {
-        padding: 0.85rem 2rem;
-        font-size: 1rem;
-    }
-    
-    .thumbnail-nav {
-        gap: 1rem;
-        justify-content: center;
-    }
-    
-    .thumb-btn {
-        padding: 0.75rem;
+        font-size: 0.85rem;
     }
     
     .thumb-image {
@@ -760,19 +808,13 @@
         padding: 0.6rem 2rem;
     }
     
-    .contribution-details {
-        margin-top: 3rem;
-        padding-top: 2.5rem;
-    }
-    
     .contribution-title,
     .techstack-title {
-        font-size: 1.4rem;
+        font-size: 1.1rem;
     }
     
     .contribution-list li {
-        font-size: 0.95rem;
-        margin-bottom: 0.7rem;
+        font-size: 0.9rem;
     }
     
     .techstack-tags {

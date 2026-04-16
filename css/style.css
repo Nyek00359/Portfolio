@@ -12,12 +12,20 @@
     --glow-accent: rgba(0, 255, 136, 0.5);
 }
 
+/* Base font size - 2px smaller than default 16px */
+html {
+    font-size: 14px;
+}
+
+/* Import 8-bit font */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 /* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Press Start 2P', cursive;
 }
 
 body {
