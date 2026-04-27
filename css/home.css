@@ -128,13 +128,16 @@ html {
 }
 
 .service-card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid var(--glow-primary);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
     padding: 1.5rem;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 .service-card::before {
@@ -151,8 +154,9 @@ html {
 
 .service-card:hover {
     transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.08);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 0 20px var(--glow-primary);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(99, 102, 241, 0.4);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), 0 0 20px var(--glow-primary);
 }
 
 .service-card:hover::before {
@@ -202,17 +206,23 @@ html {
 
 .skill-item {
     background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     padding: 1rem;
     text-align: center;
     transition: all 0.3s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 .skill-item:hover {
-    background: rgba(99, 102, 241, 0.2);
+    background: rgba(99, 102, 241, 0.15);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     transform: scale(1.02);
     border-color: var(--primary);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2), 0 0 15px var(--glow-primary);
 }
 
 .skill-icon {
