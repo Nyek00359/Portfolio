@@ -19,6 +19,7 @@ html {
 
 /* Import 8-bit font */
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
 /* Reset */
 * {
@@ -457,6 +458,7 @@ body::before {
     background-clip: text;
     margin-bottom: 1rem;
     line-height: 1.1;
+    font-family: 'Orbitron', sans-serif;
 }
 
 .hero-content .title {
@@ -464,6 +466,7 @@ body::before {
     color: rgba(255, 255, 255, 0.7);
     margin-bottom: 1.5rem;
     font-weight: 400;
+    font-family: 'Orbitron', sans-serif;
 }
 
 .hero-content .description {
@@ -513,6 +516,7 @@ body::before {
     text-align: center;
     margin-bottom: 3rem;
     position: relative;
+    font-family: 'Orbitron', sans-serif;
 }
 
 .section-title::after {
@@ -581,6 +585,7 @@ body::before {
     font-size: 1.3rem;
     margin-bottom: 1rem;
     color: #fff;
+    font-family: 'Orbitron', sans-serif;
 }
 
 .service-card p {
@@ -627,6 +632,7 @@ body::before {
 .skill-item h4 {
     font-size: 1rem;
     color: rgba(255, 255, 255, 0.9);
+    font-family: 'Orbitron', sans-serif;
 }
 
 /* Certificates Section */
@@ -664,6 +670,7 @@ body::before {
     font-size: 1.3rem;
     margin-bottom: 0.5rem;
     color: #fff;
+    font-family: 'Orbitron', sans-serif;
 }
 
 .certificate-card .issuer {
@@ -745,6 +752,7 @@ body::before {
 .showcase-content h3 {
     font-size: 1.2rem;
     margin-bottom: 0.3rem;
+    font-family: 'Orbitron', sans-serif;
 }
 
 .showcase-content p {
@@ -923,6 +931,7 @@ body::before {
     background: linear-gradient(135deg, var(--primary), var(--accent));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-family: 'Orbitron', sans-serif;
 }
 
 .website-description p {
@@ -1005,6 +1014,7 @@ body::before {
 .app-header h3 {
     font-size: 1.3rem;
     margin-bottom: 0.3rem;
+    font-family: 'Orbitron', sans-serif;
 }
 
 .app-header p {
@@ -1040,6 +1050,8 @@ body::before {
 .app-card-info h4 {
     font-size: 0.95rem;
     margin-bottom: 0.2rem;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: 'Orbitron', sans-serif;
 }
 
 .app-card-info p {
@@ -1081,6 +1093,7 @@ body::before {
     background: linear-gradient(135deg, var(--primary), var(--accent));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-family: 'Orbitron', sans-serif;
 }
 
 .feature-item {
@@ -1114,6 +1127,8 @@ body::before {
 .feature-info h4 {
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-family: 'Orbitron', sans-serif;
 }
 
 .feature-info p {
@@ -1128,9 +1143,18 @@ body::before {
         text-align: center;
     }
 
-    .hero-content h1 {
-        font-size: 3rem;
-    }
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.8rem;
+    line-height: 1.2;
+    text-shadow: 0 0 30px var(--glow-primary);
+    font-family: 'Orbitron', sans-serif;
+}
 
     .showcase-grid {
         grid-template-columns: repeat(2, 1fr);

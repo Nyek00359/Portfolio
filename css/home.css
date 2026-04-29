@@ -7,6 +7,7 @@ html {
 
 /* Import 8-bit font */
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
 /* Hero */
 .home-section {
@@ -35,6 +36,7 @@ html {
     margin-bottom: 0.8rem;
     line-height: 1.2;
     text-shadow: 0 0 30px var(--glow-primary);
+    font-family: 'Orbitron', sans-serif;
 }
 
 .hero-content .title {
@@ -44,6 +46,7 @@ html {
     font-weight: 400;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+    font-family: 'Orbitron', sans-serif;
 }
 
 .hero-content .description {
@@ -106,6 +109,7 @@ html {
     margin-bottom: 2rem;
     position: relative;
     color: #fff;
+    font-family: 'Orbitron', sans-serif;
 }
 
 .section-title::after {
@@ -183,6 +187,7 @@ html {
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
     color: #fff;
+    font-family: 'Orbitron', sans-serif;
 }
 
 .service-card p {
@@ -236,6 +241,7 @@ html {
 .skill-item h4 {
     font-size: 0.85rem;
     color: rgba(255, 255, 255, 0.9);
+    font-family: 'Orbitron', sans-serif;
 }
 
 /* Certificates Section */
@@ -273,6 +279,7 @@ html {
     font-size: 1.1rem;
     margin-bottom: 0.3rem;
     color: #fff;
+    font-family: 'Orbitron', sans-serif;
 }
 
 .certificate-card .issuer {
@@ -386,6 +393,7 @@ html {
     color: #fff;
     font-size: 1rem;
     margin-bottom: 0.3rem;
+    font-family: 'Orbitron', sans-serif;
 }
 
 .contact-info p {
@@ -397,6 +405,7 @@ html {
 @media (min-width: 768px) {
     .hero-content h1 {
         font-size: 3rem;
+        font-family: 'Orbitron', sans-serif;
     }
     
     .hero {
@@ -436,6 +445,7 @@ html {
 @media (min-width: 1024px) {
     .hero-content h1 {
         font-size: 4rem;
+        font-family: 'Orbitron', sans-serif;
     }
     
     .section-title {
