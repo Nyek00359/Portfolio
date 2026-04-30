@@ -348,16 +348,22 @@ body::before {
     height: 45px;
     background: linear-gradient(135deg, var(--primary), var(--secondary));
     border: none;
+    color: #fff;
+    font-size: 1rem;
     cursor: pointer;
     padding: 0;
     z-index: 1001;
     border-radius: 10px;
     box-shadow: 0 4px 15px var(--glow-primary);
     transition: all 0.3s ease;
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .hamburger:hover {
-    transform: scale(1.05);
+    transform: translateY(-50%) scale(1.05);
     box-shadow: 0 6px 20px var(--glow-secondary);
 }
 
@@ -389,9 +395,13 @@ body::before {
     .hamburger {
         display: flex;
         position: absolute;
-        right: 2rem;
+        right: 1rem;
         top: 50%;
         transform: translateY(-50%);
+    }
+
+    .hamburger:hover {
+        transform: translateY(-50%) scale(1.05);
     }
 
     .nav-container {
