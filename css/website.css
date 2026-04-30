@@ -117,7 +117,7 @@ html {
 .carousel-arrow.next { right: 10px; }
 
 .website-description {
-    margin-top: 0;
+    margin: 15px;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
@@ -157,7 +157,7 @@ html {
 
 /* Website Preview Section */
 .website-preview-section {
-    margin-top: 0;
+    margin: 15px;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
@@ -534,7 +534,7 @@ html {
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
     padding: 2rem 1.5rem;
-    margin-bottom: 0;
+    margin: 15px;
 }
 
 .work-title {

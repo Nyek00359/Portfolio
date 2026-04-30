@@ -1,0 +1,355 @@
+<!-- WEBSITE DEVELOPING SECTION - Carousel Theme -->
+<section class="tab-content active" id="website">
+    <div class="website-section">
+        <h2 class="section-title">Website Development Portfolio</h2>
+
+        <!-- How Do I Work Section - Linear Timeline -->
+        <div class="how-i-work-section">
+            <h3 class="work-title">How Do I Work</h3>
+            <div class="timeline">
+                 <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="step-header">
+                            <div class="step-icon">
+                                <i class="fas fa-clipboard-list"></i>
+                            </div>
+                            <h4 class="step-title">Planning</h4>
+                        </div>
+                        <p class="step-description">I analyze requirements, define technical specifications, and create a project roadmap with milestones and timelines.</p>
+                        <ul class="step-details">
+                            <li>Technical requirements analysis</li>
+                            <li>Tech stack selection</li>
+                            <li>Database & API design</li>
+                            <li>Project timeline & milestones</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="step-header">
+                            <div class="step-icon">
+                                <i class="fas fa-pencil-ruler"></i>
+                            </div>
+                            <h4 class="step-title">Wireframe</h4>
+                        </div>
+                        <p class="step-description">I create detailed wireframes and mockups to visualize the website structure, layout, and user flow before writing any code.</p>
+                        <ul class="step-details">
+                            <li>Low-fidelity & high-fidelity wireframes</li>
+                            <li>User flow diagrams</li>
+                            <li>Interactive prototypes</li>
+                            <li>Client approval & feedback loop</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="step-header">
+                            <div class="step-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h4 class="step-title">Development</h4>
+                        </div>
+                        <p class="step-description">I build the website using modern technologies, implementing responsive design, animations, and interactive features.</p>
+                        <ul class="step-details">
+                            <li>Frontend development (HTML/CSS/JS)</li>
+                            <li>Responsive layouts for all devices</li>
+                            <li>Backend & database integration</li>
+                            <li>API development & third-party integrations</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="step-header">
+                            <div class="step-icon">
+                                <i class="fas fa-bug"></i>
+                            </div>
+                            <h4 class="step-title">Testing</h4>
+                        </div>
+                        <p class="step-description">I thoroughly test the website across devices and browsers, ensuring optimal performance and bug-free experience.</p>
+                        <ul class="step-details">
+                            <li>Cross-browser compatibility testing</li>
+                            <li>Responsive design validation</li>
+                            <li>Performance optimization</li>
+                            <li>Security & accessibility audit</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="step-header">
+                            <div class="step-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <h4 class="step-title">Launch</h4>
+                        </div>
+                        <p class="step-description">I deploy the website to production, configure hosting, and provide ongoing maintenance and support.</p>
+                        <ul class="step-details">
+                            <li>Production deployment</li>
+                            <li>DNS & SSL configuration</li>
+                            <li>Performance monitoring setup</li>
+                            <li>Documentation & handover</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Website Preview Section -->
+        <div class="website-preview-section">
+            <h3 class="preview-title">Featured Project: A+ Pack Website</h3>
+            <div class="hero-container">
+                <img id="hero-image" src="../assets/img/web/home.png" alt="A+ Pack Website" class="hero-image">
+                <div class="hero-label" id="hero-label">Home</div>
+            </div>
+
+            <div class="thumbnail-nav">
+                <button class="thumb-btn active" onclick="changeHeroImage('../assets/img/web/home.png', 'Home', this)">
+                    <img src="../assets/img/web/home.png" alt="Home" class="thumb-image">
+                    <span class="thumb-label">Home</span>
+                </button>
+                <button class="thumb-btn" onclick="changeHeroImage('../assets/img/web/products.png', 'Products', this)">
+                    <img src="../assets/img/web/products.png" alt="Products" class="thumb-image">
+                    <span class="thumb-label">Products</span>
+                </button>
+                <button class="thumb-btn" onclick="changeHeroImage('../assets/img/web/journey.png', 'Journey', this)">
+                    <img src="../assets/img/web/journey.png" alt="Journey" class="thumb-image">
+                    <span class="thumb-label">Journey</span>
+                </button>
+                <button class="thumb-btn" onclick="changeHeroImage('../assets/img/web/we buy.png', 'We buy', this)">
+                    <img src="../assets/img/web/we buy.png" alt="We buy" class="thumb-image">
+                    <span class="thumb-label">We buy</span>
+                </button>
+            </div>
+
+            <div class="preview-links">
+                <a href="https://www.aplus-pack.com/new/ver2.0.php" target="_blank" rel="noopener noreferrer" class="preview-link">
+                    <i class="fas fa-external-link-alt"></i> Visit Live Website
+                </a>
+                <button class="preview-link more-btn" onclick="openContributionModal()">
+                    <i class="fas fa-info-circle"></i> More Details
+                </button>
+            </div>
+        </div>
+
+        <!-- Novus Website Preview Section -->
+        <div class="website-preview-section">
+            <h3 class="preview-title">Featured Project: Novus Website</h3>
+            <div class="hero-container">
+                <img id="novus-hero-image" src="../assets/img/web/novus_home.png" alt="Novus Website" class="hero-image">
+                <div class="hero-label" id="novus-hero-label">Home</div>
+            </div>
+
+            <div class="thumbnail-nav">
+                <button class="thumb-btn active" onclick="changeNovusHeroImage('../assets/img/web/novus_home.png', 'Home', this)">
+                    <img src="../assets/img/web/novus_home.png" alt="Home" class="thumb-image">
+                    <span class="thumb-label">Home</span>
+                </button>
+                <button class="thumb-btn" onclick="changeNovusHeroImage('../assets/img/web/novus_process.png', 'Process', this)">
+                    <img src="../assets/img/web/novus_process.png" alt="Process" class="thumb-image">
+                    <span class="thumb-label">Process</span>
+                </button>
+                <button class="thumb-btn" onclick="changeNovusHeroImage('../assets/img/web/novus_milestone.png', 'Milestone', this)">
+                    <img src="../assets/img/web/novus_milestone.png" alt="Milestone" class="thumb-image">
+                    <span class="thumb-label">Milestone</span>
+                </button>
+                <button class="thumb-btn" onclick="changeNovusHeroImage('../assets/img/web/novus_contact.png', 'Contact', this)">
+                    <img src="../assets/img/web/novus_contact.png" alt="Contact" class="thumb-image">
+                    <span class="thumb-label">Contact</span>
+                </button>
+            </div>
+
+            <div class="preview-links">
+                <button class="preview-link more-btn" onclick="openNovusContributionModal()">
+                    <i class="fas fa-info-circle"></i> More Details
+                </button>
+            </div>
+        </div>
+
+        <!-- Mercado Website Preview Section -->
+        <div class="website-preview-section">
+            <h3 class="preview-title">Featured Project: Mercado Website</h3>
+            <div class="hero-container">
+                <img id="mercado-hero-image" src="../assets/img/web/mercado-pictures/home_mercado.jpg" alt="Mercado Website" class="hero-image">
+                <div class="hero-label" id="mercado-hero-label">Home</div>
+            </div>
+
+            <div class="thumbnail-nav">
+                <button class="thumb-btn active" onclick="changeMercadoHeroImage('../assets/img/web/mercado-pictures/home_mercado.jpg', 'Home', this)">
+                    <img src="../assets/img/web/mercado-pictures/home_mercado.jpg" alt="Home" class="thumb-image">
+                    <span class="thumb-label">Home</span>
+                </button>
+                <button class="thumb-btn" onclick="changeMercadoHeroImage('../assets/img/web/mercado-pictures/3dmodel_mercado.jpg', '3D Model', this)">
+                    <img src="../assets/img/web/mercado-pictures/3dmodel_mercado.jpg" alt="3D Model" class="thumb-image">
+                    <span class="thumb-label">3D Model</span>
+                </button>
+                <button class="thumb-btn" onclick="changeMercadoHeroImage('../assets/img/web/mercado-pictures/dashboard_mercado.jpg', 'Dashboard', this)">
+                    <img src="../assets/img/web/mercado-pictures/dashboard_mercado.jpg" alt="Dashboard" class="thumb-image">
+                    <span class="thumb-label">Dashboard</span>
+                </button>
+                <button class="thumb-btn" onclick="changeMercadoHeroImage('../assets/img/web/mercado-pictures/stall_mercado.jpg', 'Stall', this)">
+                    <img src="../assets/img/web/mercado-pictures/stall_mercado.jpg" alt="Stall" class="thumb-image">
+                    <span class="thumb-label">Stall</span>
+                </button>
+                <button class="thumb-btn" onclick="changeMercadoHeroImage('../assets/img/web/mercado-pictures/auth_mercado.jpg', 'Auth', this)">
+                    <img src="../assets/img/web/mercado-pictures/auth_mercado.jpg" alt="Auth" class="thumb-image">
+                    <span class="thumb-label">Auth</span>
+                </button>
+                <button class="thumb-btn" onclick="changeMercadoHeroImage('../assets/img/web/mercado-pictures/3dmodel1_mercado.jpg', '3D Model 2', this)">
+                    <img src="../assets/img/web/mercado-pictures/3dmodel1_mercado.jpg" alt="3D Model 2" class="thumb-image">
+                    <span class="thumb-label">3D Model 2</span>
+                </button>
+            </div>
+
+            <div class="preview-links">
+                <a href="https://nyek00359.github.io/mercado-stall-site/" target="_blank" rel="noopener noreferrer" class="preview-link">
+                    <i class="fas fa-external-link-alt"></i> Visit Live Website
+                </a>
+                <button class="preview-link more-btn" onclick="openMercadoContributionModal()">
+                    <i class="fas fa-info-circle"></i> More Details
+                </button>
+            </div>
+        </div>
+
+        <!-- Contribution Modal -->
+        <div id="contributionModal" class="modal" onclick="closeContributionModal(event)">
+            <div class="modal-content">
+                <button class="modal-close" onclick="closeContributionModal(event)">&times;</button>
+                <h2 class="modal-title">My Contributions</h2>
+                <ul class="contribution-list">
+                    <li>Built the entire responsive website from scratch using modern web technologies</li>
+                    <li>Implemented responsive navigation with hamburger menu for mobile devices</li>
+                    <li>Created an animated hero section with 3D packaging showcase and orbiting elements</li>
+                    <li>Developed an AI-powered chatbot widget with quick questions and manual response matching</li>
+                    <li>Designed and implemented a one-time help notification overlay with drag functionality</li>
+                    <li>Created the About section with company info, mission & vision, and certifications</li>
+                    <li>Built the Services section with 6 service cards (Thermoforming, Customized Mold, Precision Tooling, Product Design, Logistics, Custom Tray Packaging)</li>
+                    <li>Implemented SEO optimization including meta tags, Open Graph, Twitter Cards, and JSON-LD structured data</li>
+                    <li>Designed responsive footer with multi-column navigation and social media links</li>
+                    <li>Integrated contact form and quotation request functionality</li>
+                    <li>Added smooth scrolling and modern UI animations throughout the site</li>
+                    <li>Implemented full mobile-responsive design with touch-friendly interactions</li>
+                </ul>
+                <h3 class="techstack-title">Tech Stack Used</h3>
+                <div class="techstack-tags">
+                    <span class="tech-tag"><i class="fab fa-html5"></i> HTML5</span>
+                    <span class="tech-tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+                    <span class="tech-tag"><i class="fab fa-js"></i> JavaScript</span>
+                    <span class="tech-tag"><i class="fas fa-code"></i> Vanilla JS</span>
+                    <span class="tech-tag"><i class="fab fa-google"></i> Google Fonts</span>
+                    <span class="tech-tag"><i class="fas fa-search"></i> SEO</span>
+                    <span class="tech-tag"><i class="fas fa-mobile-alt"></i> Responsive Design</span>
+                    <span class="tech-tag"><i class="fas fa-robot"></i> AI Chatbot</span>
+                    <span class="tech-tag"><i class="fas fa-chart-pie"></i> JSON-LD</span>
+                </div>
+                <div class="case-study-modal">
+                    <h3 class="case-study-title">Case Study</h3>
+                    <p class="case-problem"><strong>Problem:</strong> A packaging company needed an online presence to showcase products and enable direct customer inquiries.</p>
+                    <p class="case-solution"><strong>Solution:</strong> Built a full e-commerce website with AI chatbot for customer support, product catalog, and quotation system.</p>
+                    <p class="case-impact"><strong>Impact:</strong> Enabled 24/7 customer engagement and streamlined inquiry process.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Novus Contribution Modal -->
+        <div id="novusContributionModal" class="modal" onclick="closeNovusContributionModal(event)">
+            <div class="modal-content">
+                <button class="modal-close" onclick="closeNovusContributionModal(event)">&times;</button>
+                <h2 class="modal-title">My Contributions</h2>
+                <ul class="contribution-list">
+                    <li>Developed a complete multi-page corporate website from scratch</li>
+                    <li>Created a custom PHP-based content management system</li>
+                    <li>Implemented responsive design with modern CSS techniques</li>
+                    <li>Built an interactive process section showcasing company workflow</li>
+                    <li>Designed a milestone timeline with visual achievements display</li>
+                    <li>Created a contact form with validation and submission handling</li>
+                    <li>Implemented smooth scrolling navigation</li>
+                    <li>Added modern animations and transitions</li>
+                    <li>Optimized for performance and fast loading</li>
+                </ul>
+                <h3 class="techstack-title">Tech Stack Used</h3>
+                <div class="techstack-tags">
+                    <span class="tech-tag"><i class="fab fa-html5"></i> HTML5</span>
+                    <span class="tech-tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+                    <span class="tech-tag"><i class="fab fa-js"></i> JavaScript</span>
+                    <span class="tech-tag"><i class="fab fa-php"></i> PHP</span>
+                    <span class="tech-tag"><i class="fas fa-database"></i> MySQL</span>
+                    <span class="tech-tag"><i class="fas fa-mobile-alt"></i> Responsive Design</span>
+                    <span class="tech-tag"><i class="fas fa-server"></i> Backend Development</span>
+                </div>
+                <div class="case-study-modal">
+                    <h3 class="case-study-title">Case Study</h3>
+                    <p class="case-problem"><strong>Problem:</strong> A corporation needed a custom CMS for non-technical staff to manage website content.</p>
+                    <p class="case-solution"><strong>Solution:</strong> Developed a PHP-based content management system with intuitive admin panel.</p>
+                    <p class="case-impact"><strong>Impact:</strong> Reduced content update time from days to minutes, empowered marketing team.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mercado Contribution Modal -->
+        <div id="mercadoContributionModal" class="modal" onclick="closeMercadoContributionModal(event)">
+            <div class="modal-content">
+                <button class="modal-close" onclick="closeMercadoContributionModal(event)">&times;</button>
+                <h2 class="modal-title">My Contributions</h2>
+                <ul class="contribution-list">
+                    <li>Designed and developed a full-featured e-commerce website for Mercado</li>
+                    <li>Created responsive product catalog with filtering and search functionality</li>
+                    <li>Built a complete shopping cart system with checkout process</li>
+                    <li>Implemented secure payment integration with Stripe</li>
+                    <li>Developed user authentication and account management</li>
+                    <li>Created admin dashboard for product and order management</li>
+                    <li>Optimized for fast loading and excellent performance</li>
+                    <li>Integrated real-time inventory tracking</li>
+                </ul>
+                <h3 class="techstack-title">Tech Stack Used</h3>
+                <div class="techstack-tags">
+                    <span class="tech-tag"><i class="fab fa-html5"></i> HTML5</span>
+                    <span class="tech-tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+                    <span class="tech-tag"><i class="fab fa-js"></i> JavaScript</span>
+                    <span class="tech-tag"><i class="fab fa-react"></i> React</span>
+                    <span class="tech-tag"><i class="fab fa-node"></i> Node.js</span>
+                    <span class="tech-tag"><i class="fas fa-database"></i> MongoDB</span>
+                    <span class="tech-tag"><i class="fas fa-credit-card"></i> Stripe API</span>
+                    <span class="tech-tag"><i class="fas fa-mobile-alt"></i> Responsive</span>
+                </div>
+                <div class="case-study-modal">
+                    <h3 class="case-study-title">Case Study</h3>
+                    <p class="case-problem"><strong>Problem:</strong> E-commerce startup needed a robust online store to launch their product line with seamless payment processing.</p>
+                    <p class="case-solution"><strong>Solution:</strong> Built a full-stack e-commerce platform with React frontend, Node.js backend, and integrated payment system.</p>
+                    <p class="case-impact"><strong>Impact:</strong> Successfully launched online store processing 100+ orders in first month with 99.9% uptime.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Description -->
+        <div class="website-description">
+            <h3>Custom Website Development</h3>
+            <p>
+                I create stunning, responsive websites that engage users and drive results.
+                From e-commerce platforms to corporate websites, I deliver tailored solutions
+                that meet your unique business needs.
+            </p>
+            <p>
+                Every project starts with understanding your vision and goals. I combine
+                creativity with technical expertise to build websites that not only look
+                beautiful but also perform exceptionally well.
+            </p>
+            <div class="tech-stack">
+                <span class="tech-tag"><i class="fab fa-html5"></i> HTML5</span>
+                <span class="tech-tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+                <span class="tech-tag"><i class="fab fa-js"></i> JavaScript</span>
+                <span class="tech-tag"><i class="fab fa-react"></i> React</span>
+                <span class="tech-tag"><i class="fab fa-vuejs"></i> Vue.js</span>
+                <span class="tech-tag"><i class="fab fa-node"></i> Node.js</span>
+                <span class="tech-tag"><i class="fab fa-python"></i> Python</span>
+                <span class="tech-tag"><i class="fab fa-php"></i> PHP</span>
+            </div>
+        </div>
+    </div>
+</section>

@@ -2,6 +2,58 @@
 
 // Define the current page for active navigation
 const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+const isMainPage = currentPage === 'main-page.html';
+
+function getNavHref(pageHref, sectionId) {
+    return isMainPage ? `#${sectionId}` : pageHref;
+}
+
+function setActiveNavTab(activeSectionId) {
+    const navLinks = document.querySelectorAll('.nav-tab');
+    navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('data-tab') === activeSectionId);
+    });
+}
+
+function getMainPageActiveSection() {
+    const sectionIds = ['home', 'website', 'app'];
+    let activeSectionId = sectionIds[0];
+
+    sectionIds.forEach(sectionId => {
+        const section = document.getElementById(sectionId);
+        if (!section) return;
+
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= 160 && rect.bottom > 160) {
+            activeSectionId = sectionId;
+        }
+    });
+
+    return activeSectionId;
+}
+
+function initializeMainPageNavigation() {
+    if (!isMainPage) return;
+
+    const navLinks = document.querySelectorAll('.nav-tab');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            const targetSectionId = link.getAttribute('data-tab');
+            setActiveNavTab(targetSectionId);
+        });
+    });
+
+    const syncActiveSection = () => {
+        const hashSectionId = window.location.hash.replace('#', '');
+        const activeSectionId = hashSectionId || getMainPageActiveSection();
+        setActiveNavTab(activeSectionId);
+    };
+
+    document.addEventListener('scroll', syncActiveSection, { passive: true });
+    window.addEventListener('hashchange', syncActiveSection);
+    syncActiveSection();
+}
 
 // Background Component
 const backgroundHTML = `
@@ -33,13 +85,13 @@ const navigationHTML = `
             <span></span>
         </button>
         <div class="nav-tabs" id="navTabs">
-            <a href="../pages/index.html" class="nav-tab ${currentPage === 'index.html' ? 'active' : ''}" data-tab="home">
+            <a href="${getNavHref('../pages/index.html', 'home')}" class="nav-tab ${(currentPage === 'index.html' || isMainPage) ? 'active' : ''}" data-tab="home">
                 <i class="fas fa-home"></i> Home
             </a>
-            <a href="../pages/website.html" class="nav-tab ${currentPage === 'website.html' ? 'active' : ''}" data-tab="web">
+            <a href="${getNavHref('../pages/website.html', 'website')}" class="nav-tab ${currentPage === 'website.html' ? 'active' : ''}" data-tab="website">
                 <i class="fas fa-globe"></i> Web
             </a>
-            <a href="../pages/app.html" class="nav-tab ${currentPage === 'app.html' ? 'active' : ''}" data-tab="app">
+            <a href="${getNavHref('../pages/app.html', 'app')}" class="nav-tab ${currentPage === 'app.html' ? 'active' : ''}" data-tab="app">
                 <i class="fas fa-mobile-alt"></i> App
             </a>
         </div>
@@ -88,6 +140,9 @@ function injectComponents() {
     
     // Add close menu on click listeners
     closeMenuOnClick();
+
+    // Sync active navigation for the one-page mobile layout
+    initializeMainPageNavigation();
 }
 
 // Initialize components when DOM is ready

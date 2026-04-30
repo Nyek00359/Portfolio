@@ -1,4 +1,6 @@
 // Tab Switching
+const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+const isMainPage = currentPage === 'main-page.html';
 const tabs = document.querySelectorAll('.nav-tab');
 const tabContents = document.querySelectorAll('.tab-content');
 
@@ -9,11 +11,18 @@ tabs.forEach(tab => {
         // Add active class to clicked tab
         tab.classList.add('active');
 
+        if (isMainPage) {
+            return;
+        }
+
         // Hide all tab contents
         tabContents.forEach(content => content.classList.remove('active'));
         // Show corresponding tab content
         const tabId = tab.getAttribute('data-tab');
-        document.getElementById(tabId).classList.add('active');
+        const targetTab = document.getElementById(tabId);
+        if (targetTab) {
+            targetTab.classList.add('active');
+        }
     });
 });
 

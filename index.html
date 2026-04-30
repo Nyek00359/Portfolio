@@ -400,7 +400,7 @@
             <span class="typing-text" id="typing"></span>
         </div>
 
-        <a href="pages/index.html" class="enter-btn">
+        <a href="pages/index.html" class="enter-btn" id="enterPortfolioBtn">
             Enter Portfolio
         </a>
     </div>
@@ -434,6 +434,20 @@
         setTimeout(() => {
             document.querySelector('.loading-bar').style.opacity = '0';
         }, 2500);
+
+        // Route mobile users to the one-page portfolio experience.
+        const enterPortfolioBtn = document.getElementById('enterPortfolioBtn');
+        const mobileBreakpoint = window.matchMedia('(max-width: 768px)');
+
+        function updatePortfolioEntryLink() {
+            if (!enterPortfolioBtn) return;
+            enterPortfolioBtn.setAttribute('href', mobileBreakpoint.matches ? 'pages/main-page.html' : 'pages/index.html');
+        }
+
+        if (enterPortfolioBtn) {
+            updatePortfolioEntryLink();
+            mobileBreakpoint.addEventListener('change', updatePortfolioEntryLink);
+        }
     </script>
 </body>
 </html>
