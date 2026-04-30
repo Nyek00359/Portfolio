@@ -79,6 +79,9 @@ const backgroundHTML = `
 const navigationHTML = `
     <!-- Navigation -->
     <nav class="nav-container">
+        <a href="${getNavHref('../pages/index.html', 'home')}" class="nav-logo">
+            <img src="../assets/img/LOGO_PUZZ.png" alt="Logo" class="logo-img">
+        </a>
         <button class="hamburger" onclick="toggleMenu()">
             <span></span>
             <span></span>

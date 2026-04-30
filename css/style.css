@@ -18,7 +18,6 @@ html {
 }
 
 /* Import 8-bit font */
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
 /* Reset */
@@ -239,6 +238,9 @@ body::before {
     padding: 0.8rem 2rem;
     border-bottom: 1px solid var(--glow-primary);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .nav-tabs {
@@ -302,6 +304,40 @@ body::before {
     font-size: 1rem;
 }
 
+/* Logo Styles */
+.nav-logo {
+    position: absolute;
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-img {
+    height: 45px;
+    width: auto;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 10px var(--glow-primary));
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .nav-logo {
+        left: 1rem;
+    }
+    
+    .logo-img {
+        height: 38px;
+    }
+}
+
 /* Hamburger Menu */
 .hamburger {
     display: none;
@@ -353,13 +389,13 @@ body::before {
     .hamburger {
         display: flex;
         position: absolute;
-        right: 1rem;
+        right: 2rem;
         top: 50%;
         transform: translateY(-50%);
     }
 
     .nav-container {
-        padding: 0.8rem 1rem;
+        padding: 3rem 1rem;
     }
 
     .nav-tabs {
