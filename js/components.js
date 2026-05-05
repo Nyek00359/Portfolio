@@ -61,6 +61,8 @@ const backgroundHTML = `
     <div class="bg-grid">
         <div class="grid-canvas" id="gridCanvas"></div>
     </div>
+    <div class="crt-overlay"></div>
+    <div class="vignette-overlay"></div>
     
     <!-- Floating Objects -->
     <div class="floating-object"></div>
@@ -73,6 +75,10 @@ const backgroundHTML = `
     <div class="glow-orb"></div>
     <div class="glow-orb"></div>
     <div class="glow-orb"></div>
+    <div class="hud-readout">
+        <span class="hud-status">CRT Online</span>
+        <span class="hud-bars"><span></span><span></span><span></span></span>
+    </div>
 `;
 
 // Navigation Component
