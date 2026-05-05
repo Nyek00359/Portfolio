@@ -88,7 +88,11 @@ const navigationHTML = `
         <a href="${getNavHref('../pages/index.html', 'home')}" class="nav-logo">
             <img src="../assets/img/LOGO_PUZZ.png" alt="Logo" class="logo-img">
         </a>
-        <button class="hamburger" onclick="toggleMenu()">
+        <div class="nav-mobile-title">
+            <span class="nav-mobile-kicker">Portfolio</span>
+            <span class="nav-mobile-subtitle">Mobile Command</span>
+        </div>
+        <button class="hamburger" type="button" aria-expanded="false" aria-controls="navTabs" onclick="toggleMenu()">
             <span></span>
             <span></span>
             <span></span>
@@ -105,14 +109,23 @@ const navigationHTML = `
             </a>
         </div>
     </nav>
+    <button class="nav-backdrop" id="navBackdrop" type="button" aria-label="Close navigation"></button>
 `;
 
 // Function to toggle mobile menu
 function toggleMenu() {
     const hamburger = document.querySelector('.hamburger');
     const navTabs = document.getElementById('navTabs');
-    hamburger.classList.toggle('active');
-    navTabs.classList.toggle('active');
+    const navBackdrop = document.getElementById('navBackdrop');
+    const shouldOpen = !navTabs.classList.contains('active');
+
+    hamburger.classList.toggle('active', shouldOpen);
+    hamburger.setAttribute('aria-expanded', String(shouldOpen));
+    navTabs.classList.toggle('active', shouldOpen);
+    if (navBackdrop) {
+        navBackdrop.classList.toggle('active', shouldOpen);
+    }
+    document.body.classList.toggle('nav-open', shouldOpen && window.innerWidth <= 768);
 }
 
 // Make toggleMenu available globally
@@ -125,11 +138,46 @@ function closeMenuOnClick() {
         link.addEventListener('click', () => {
             const hamburger = document.querySelector('.hamburger');
             const navTabs = document.getElementById('navTabs');
+            const navBackdrop = document.getElementById('navBackdrop');
             if (window.innerWidth <= 768) {
                 hamburger.classList.remove('active');
                 navTabs.classList.remove('active');
+                if (navBackdrop) {
+                    navBackdrop.classList.remove('active');
+                }
+                document.body.classList.remove('nav-open');
             }
         });
+    });
+}
+
+function initializeMobileNavDismiss() {
+    const navBackdrop = document.getElementById('navBackdrop');
+
+    if (navBackdrop) {
+        navBackdrop.addEventListener('click', () => {
+            const hamburger = document.querySelector('.hamburger');
+            const navTabs = document.getElementById('navTabs');
+
+            hamburger?.classList.remove('active');
+            hamburger?.setAttribute('aria-expanded', 'false');
+            navTabs?.classList.remove('active');
+            navBackdrop.classList.remove('active');
+            document.body.classList.remove('nav-open');
+        });
+    }
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            const hamburger = document.querySelector('.hamburger');
+            const navTabs = document.getElementById('navTabs');
+
+            hamburger?.classList.remove('active');
+            hamburger?.setAttribute('aria-expanded', 'false');
+            navTabs?.classList.remove('active');
+            navBackdrop?.classList.remove('active');
+            document.body.classList.remove('nav-open');
+        }
     });
 }
 
@@ -149,6 +197,7 @@ function injectComponents() {
     
     // Add close menu on click listeners
     closeMenuOnClick();
+    initializeMobileNavDismiss();
 
     // Sync active navigation for the one-page mobile layout
     initializeMainPageNavigation();
